@@ -41,6 +41,8 @@ app.put('/image', (req, res) => { image.handleImagePut(req, res, db) })
 
 app.post('/imageUrl', (req, res) => { image.handleApiCall(req, res) })
 
-app.listen(3000);
+app.listen(process.env.PORT, () => {
+    console.log(`app is running on ${process.env.PORT}`)
+});
 
 //for heroku//
